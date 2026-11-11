@@ -1,0 +1,274 @@
+
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7f6;
+    color: #222;
+}
+
+/* Navbar */
+header {
+    background: #123c32;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+}
+
+.logo span {
+    color: #f4b942;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f4b942;
+}
+
+/* Hero */
+.hero {
+    height: 550px;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600")
+        center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    color: white;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    background: #f4b942;
+    color: #123c32;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e5a923;
+    transform: translateY(-3px);
+}
+
+/* Tentang */
+.about {
+    text-align: center;
+    padding: 65px 10%;
+}
+
+.about h2,
+.destinasi h2 {
+    color: #123c32;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Destinasi */
+.destinasi {
+    padding: 60px 8%;
+    text-align: center;
+    background: #eaf0ed;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #123c32;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.card-content .deskripsi {
+    color: #555;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+.card-content h4 {
+    color: #e69b13;
+    font-size: 19px;
+    margin: 15px 0;
+}
+
+/* Tombol WhatsApp */
+.btn-wa {
+    display: block;
+    text-align: center;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-wa:hover {
+    background: #1da851;
+}
+
+/* Kontak */
+.kontak {
+    text-align: center;
+    padding: 70px 20px;
+    background: #123c32;
+    color: white;
+}
+
+.kontak h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.kontak p {
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    background: #09271f;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* Responsive HP dan Tablet */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 450px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .destinasi h2 {
+        font-size: 26px;
+    }
+}
